@@ -111,24 +111,42 @@
             font-size: 19px;
         }
 
-        /* Chhota Popup - Button ke neeche */
-        .urgency-box {
-            background: linear-gradient(135deg, #ff9933, #e67e22);
+        /* Badge Style Urgency Box (Ribbon/Banner Shape) */
+        .urgency-badge {
+            background: linear-gradient(135deg, #ff4d4d, #e63939);
             color: white;
-            padding: 14px 18px;
-            border-radius: 12px;
+            padding: 16px 25px;
+            border-radius: 50px 50px 50px 50px;   /* Badge jaisa rounded shape */
             text-align: center;
-            font-size: 16px;
+            font-size: 16.5px;
             line-height: 1.5;
-            margin: 10px 0 20px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            border: 2px solid #fff;
+            margin: 18px auto;
+            max-width: 360px;
+            box-shadow: 0 6px 20px rgba(230, 57, 57, 0.4);
+            border: 3px solid #fff;
+            position: relative;
+            font-weight: 600;
         }
 
-        .urgency-box strong {
-            font-size: 17px;
+        .urgency-badge::before,
+        .urgency-badge::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            width: 30px;
+            height: 30px;
+            background: #ff4d4d;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .urgency-badge::before { left: -15px; }
+        .urgency-badge::after { right: -15px; }
+
+        .urgency-badge strong {
+            font-size: 18px;
             display: block;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
         footer {
@@ -185,6 +203,7 @@
         </div>
     </section>
 
+    <!-- Other sections same as before -->
     <section>
         <h2 id="eligibility-h2">एयर फोर्स X & Y ग्रुप (अग्निवीर वायु) 2026-27 के लिए योग्यता</h2>
         <p id="common-req"><strong>दोनों ग्रुप्स के लिए सामान्य शर्तें:</strong></p>
@@ -232,9 +251,9 @@
 
 <div class="container">
     <a href="https://forms.gle/KosUyvCoHKzXSaRr5" class="btn register" id="register-btn">फ्री में अभी रजिस्टर करें</a>
-    
-    <!-- Chhota Urgency Box - Register button ke neeche -->
-    <div class="urgency-box" id="urgency-box">
+
+    <!-- Badge Style Centered Urgency -->
+    <div class="urgency-badge" id="urgency-box">
         <strong>⚠️ ध्यान दें</strong>
         Free Registration सिर्फ <strong>20 April 2026</strong> तक!<br>
         21 April से ₹199 Registration Fee लगेगी।
@@ -308,11 +327,10 @@
         }
     }
 
-    // Default Hindi
     window.onload = function() {
         switchLanguage('hi');
     };
 </script>
 
 </body>
-    </html>
+</html>
