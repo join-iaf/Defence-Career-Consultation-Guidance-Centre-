@@ -111,49 +111,43 @@
             font-size: 19px;
         }
 
-        /* Attention Seeking Follow Us Section */
-        .follow-section {
-            background: linear-gradient(135deg, #ff9933, #e67e22);
+        /* Badge Style Urgency Box (Ribbon/Banner Shape) */
+        .urgency-badge {
+            background: linear-gradient(135deg, #ff4d4d, #e63939);
             color: white;
-            padding: 25px 20px;
-            border-radius: 15px;
+            padding: 16px 25px;
+            border-radius: 50px 50px 50px 50px;   /* Badge jaisa rounded shape */
             text-align: center;
-            margin: 25px 0;
-            box-shadow: 0 8px 25px rgba(255, 153, 51, 0.4);
-            animation: pulse 2s infinite;
+            font-size: 16.5px;
+            line-height: 1.5;
+            margin: 18px auto;
+            max-width: 360px;
+            box-shadow: 0 6px 20px rgba(230, 57, 57, 0.4);
+            border: 3px solid #fff;
+            position: relative;
+            font-weight: 600;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
+        .urgency-badge::before,
+        .urgency-badge::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            width: 30px;
+            height: 30px;
+            background: #ff4d4d;
+            border-radius: 50%;
+            z-index: -1;
         }
 
-        .follow-section h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        }
+        .urgency-badge::before { left: -15px; }
+        .urgency-badge::after { right: -15px; }
 
-        .social-btn {
-            display: inline-block;
-            padding: 14px 28px;
-            margin: 8px;
+        .urgency-badge strong {
             font-size: 18px;
-            font-weight: bold;
-            border-radius: 50px;
-            text-decoration: none;
-            color: white;
-            transition: all 0.3s;
+            display: block;
+            margin-bottom: 6px;
         }
-
-        .social-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-
-        .fb { background: #1877f2; }
-        .insta { background: linear-gradient(45deg, #f56040, #c13584, #833ab4); }
 
         footer {
             text-align: center;
@@ -162,6 +156,11 @@
             color: white;
             font-size: 15px;
             line-height: 1.6;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
         }
 
         .copyright {
@@ -175,42 +174,163 @@
 </head>
 <body>
 
-<!-- ... purana content same rahega ... -->
+<div class="lang-switch">
+    <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+    <button class="lang-btn" onclick="switchLanguage('hi')">हिंदी</button>
+</div>
+
+<header>
+    <h1 id="title">डिफेंस करियर कंसल्टेशन एंड गाइडेंस सेंटर</h1>
+    <p id="tagline">गांव के सपनों को भारतीय वायु सेना में बदलना • अग्निवीर वायु (X & Y ग्रुप) पर विशेष फोकस</p>
+</header>
 
 <div class="container">
 
-    <!-- Purana sab content yahan rahega (About Us, Why Join Us, Eligibility, etc.) -->
+    <section>
+        <h2 id="about-h2">हमारे बारे में</h2>
+        <p id="about-text">
+            डिफेंस करियर कंसल्टेशन एंड गाइडेंस सेंटर में हम गंगौली और आस-पास के क्षेत्रों के महत्वाकांक्षी युवाओं को <strong>भारतीय वायु सेना अग्निवीर वायु (X & Y ग्रुप)</strong> में सफलतापूर्वक भर्ती होने के लिए मार्गदर्शन देते हैं। कई 12वीं पास छात्र अच्छे अंकों के बावजूद सही दिशा न मिलने के कारण भटक जाते हैं। हम व्यावहारिक और अनुभव-आधारित मेंटरशिप देते हैं ताकि आपका समय बर्बाद न हो और आप आत्मविश्वास व अनुशासन के साथ अपना सपना पूरा कर सकें।
+        </p>
+    </section>
 
-    <!-- Naya Attention Seeking Follow Us Section -->
-    <div class="follow-section">
-        <h3>⭐ हमें फॉलो करें और लेटेस्ट अपडेट्स पाएं ⭐</h3>
-        <p style="margin-bottom: 18px; font-size: 18px;">एयर फोर्स X & Y Group की latest news, tips और notifications सबसे पहले पाने के लिए</p>
-        
-        <a href="https://www.facebook.com/share/1CbfVrFsrW/" class="social-btn fb" target="_blank">
-            👍 Facebook पर फॉलो करें
-        </a>
-        
-        <a href="https://www.instagram.com/join.iaf?igsh=MXQ5MDVyNXhmODI0cQ==" class="social-btn insta" target="_blank">
-            📸 Instagram पर फॉलो करें
-        </a>
-    </div>
+    <section>
+        <h2 id="why-h2">हमसे क्यों जुड़ें</h2>
+        <p id="why-text">
+            गांव के छात्र अक्सर 12वीं के बाद सही गाइडेंस न मिलने के कारण confused हो जाते हैं। हम इस समस्या का समाधान करते हैं — सिलेबस की सही रणनीति, परीक्षा की तैयारी, शारीरिक ट्रेनिंग के टिप्स और चयन प्रक्रिया की असली जानकारी देकर। हमारा फोकस आपका कीमती समय बचाना और एयर फोर्स X & Y ग्रुप में सफलता दिलाना है।
+        </p>
+        <div class="highlight">
+            <strong id="promise">हमारा वादा:</strong> ईमानदार मार्गदर्शन, कोई झूठा वादा नहीं — सिर्फ मेहनत + सही दिशा = सफलता।
+        </div>
+    </section>
+
+    <!-- Other sections same as before -->
+    <section>
+        <h2 id="eligibility-h2">एयर फोर्स X & Y ग्रुप (अग्निवीर वायु) 2026-27 के लिए योग्यता</h2>
+        <p id="common-req"><strong>दोनों ग्रुप्स के लिए सामान्य शर्तें:</strong></p>
+        <ul id="eligibility-list">
+            <li><strong>आयु:</strong> 17.5 से 21 वर्ष (नोटिफिकेशन में जन्म तिथि चेक करें)</li>
+            <li><strong>लिंग:</strong> अविवाहित पुरुष / महिला उम्मीदवार</li>
+            <li><strong>शारीरिक मानक:</strong> न्यूनतम ऊंचाई 152.5 सेमी, अच्छी मेडिकल फिटनेस</li>
+        </ul>
+
+        <p id="edu-qual"><strong>शैक्षणिक योग्यता:</strong></p>
+        <ul id="qual-list">
+            <li><strong>X ग्रुप (टेक्निकल):</strong> 12वीं में फिजिक्स, मैथ्स और इंग्लिश के साथ 50% एग्रीगेट + इंग्लिश में 50% या 3 वर्षीय डिप्लोमा</li>
+            <li><strong>Y ग्रुप (नॉन-टेक्निकल):</strong> किसी भी स्ट्रीम से 12वीं में 50% एग्रीगेट + इंग्लिश में 50%</li>
+        </ul>
+        <p id="note"><em>नोट: हमेशा आधिकारिक नोटिफिकेशन चेक करें — agnipathvayu.cdac.in या careerairforce.gov.in पर।</em></p>
+    </section>
+
+    <section>
+        <h2 id="selection-h2">चयन प्रक्रिया (संक्षेप में)</h2>
+        <p id="selection-text">
+            1. ऑनलाइन लिखित परीक्षा (X ग्रुप: फिजिक्स, मैथ्स, इंग्लिश | Y ग्रुप: इंग्लिश, रीजनिंग, GA)<br>
+            2. शारीरिक फिटनेस टेस्ट (1.6 किमी दौड़ \~6:30 मिनट में, पुश-अप्स, सिट-अप्स आदि)<br>
+            3. एडाप्टेबिलिटी टेस्ट<br>
+            4. मेडिकल परीक्षा
+        </p>
+        <p id="guidance-text">हम दोनों <strong>X ग्रुप</strong> और <strong>Y ग्रुप</strong> के लिए पूरा मार्गदर्शन देते हैं।</p>
+    </section>
+
+    <section>
+        <h2 id="mentor-h2">मेंटर के बारे में</h2>
+        <p id="mentor-text">
+            यहां दिया गया मार्गदर्शन वायु सेना की चयन प्रक्रिया का वास्तविक अनुभव और व्यावहारिक ज्ञान पर आधारित है। उद्देश्य है कि मेहनती ग्रामीण छात्र आम गलतियों से बचें और अनुशासन, स्मार्ट रणनीति तथा समर्पण से X & Y ग्रुप क्रैक कर सकें।
+        </p>
+    </section>
+
+    <section>
+        <h2 id="contact-h2">संपर्क करें</h2>
+        <div class="contact-box">
+            <p><strong>📍 पता:</strong> <span id="address">गंगौली, गाजीपुर, उत्तर प्रदेश</span></p>
+            <p><strong>📞 व्हाट्सएप:</strong> <a href="https://wa.me/918858235844" style="color:#25D366; text-decoration:none; font-weight:bold;" id="whatsapp-link">यहां क्लिक करके व्हाट्सएप पर संपर्क करें</a></p>
+        </div>
+    </section>
 
 </div>
 
-<!-- Baaki ka code same rahega (Register button, urgency box, WhatsApp button, footer) -->
+<div class="container">
+    <a href="https://forms.gle/KosUyvCoHKzXSaRr5" class="btn register" id="register-btn">फ्री में अभी रजिस्टर करें</a>
+
+    <!-- Badge Style Centered Urgency -->
+    <div class="urgency-badge" id="urgency-box">
+        <strong>⚠️ ध्यान दें</strong>
+        Free Registration सिर्फ <strong>20 April 2026</strong> तक!<br>
+        21 April से ₹199 Registration Fee लगेगी।
+    </div>
+
+    <a href="https://wa.me/918858235844" class="btn whatsapp" id="whatsapp-btn">व्हाट्सएप पर संपर्क करें</a>
+</div>
 
 <footer>
-    <p><strong>Defence Career Consultation & Guidance Centre</strong></p>
-    <p>Gangauli, Ghazipur, Uttar Pradesh</p>
+    <p id="follow"><strong>नवीनतम एयर फोर्स अपडेट्स के लिए हमें फॉलो करें:</strong></p>
+    <p>
+        <a href="https://www.facebook.com/share/1CbfVrFsrW/">Facebook</a> | 
+        <a href="https://www.instagram.com/join.iaf?igsh=MXQ5MDVyNXhmODI0cQ==">Instagram</a>
+    </p>
     
     <div class="copyright">
-        &copy; 2026 Defence Career Consultation & Guidance Centre. 
-        All Rights Reserved.<br>
-        <strong>Warning:</strong> Copying any content without permission is strictly prohibited.
+        &copy; 2026 डिफेंस करियर कंसल्टेशन एंड गाइडेंस सेंटर, गंगौली, गाजीपुर (यूपी)। 
+        सर्वाधिकार सुरक्षित।<br>
+        <strong>चेतावनी:</strong> यह वेबसाइट का कंटेंट केंद्र की बौद्धिक संपदा है। बिना अनुमति के कॉपी करना सख्ती से मना है।
     </div>
 </footer>
 
-<!-- Language switch script same rahega -->
+<script>
+    function switchLanguage(lang) {
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        
+        if (lang === 'en') {
+            document.querySelectorAll('.lang-btn')[0].classList.add('active');
+            document.getElementById('title').innerHTML = 'Defence Career Consultation & Guidance Centre';
+            document.getElementById('tagline').innerHTML = 'Turning Rural Dreams into Indian Air Force Careers • Special Focus on Agniveer Vayu (X & Y Group)';
+            document.getElementById('about-h2').innerHTML = 'About Us';
+            document.getElementById('about-text').innerHTML = 'At Defence Career Consultation & Guidance Centre, we guide motivated aspirants from Gangauli and nearby areas to successfully join the <strong>Indian Air Force Agniveer Vayu (X & Y Group)</strong>. Many 12th-pass students with good marks struggle due to lack of proper direction. We provide practical, experience-based mentorship so you don\'t waste time and can achieve your dream with confidence and discipline.';
+            document.getElementById('why-h2').innerHTML = 'Why Join Us';
+            document.getElementById('why-text').innerHTML = 'Students from villages often face confusion after 12th due to limited guidance. We solve this by offering clear strategies, exam preparation tips, physical training advice, and real insights into the selection process. Our focus is saving your precious time and helping you succeed in Air Force X & Y Group recruitment.';
+            document.getElementById('promise').innerHTML = 'Our Promise:';
+            document.getElementById('eligibility-h2').innerHTML = 'Eligibility for Air Force X & Y Group (Agniveer Vayu) 2026-27';
+            document.getElementById('common-req').innerHTML = '<strong>Common Requirements (Both Groups):</strong>';
+            document.getElementById('edu-qual').innerHTML = '<strong>Educational Qualification:</strong>';
+            document.getElementById('note').innerHTML = '<em>Note: Always check the official notification on agnipathvayu.cdac.in or careerairforce.gov.in.</em>';
+            document.getElementById('selection-h2').innerHTML = 'Selection Process (Brief)';
+            document.getElementById('mentor-h2').innerHTML = 'About the Mentor';
+            document.getElementById('contact-h2').innerHTML = 'Contact Us';
+            document.getElementById('register-btn').innerHTML = 'Register Now for Free';
+            document.getElementById('whatsapp-btn').innerHTML = 'Contact Us on WhatsApp';
+            document.getElementById('follow').innerHTML = '<strong>Follow Us for Latest Air Force Updates:</strong>';
+            document.getElementById('whatsapp-link').innerHTML = 'Click here to Contact on WhatsApp';
+            document.getElementById('address').innerHTML = 'Gangauli, Ghazipur, Uttar Pradesh';
+            document.getElementById('urgency-box').innerHTML = '<strong>⚠️ Important Notice</strong> Free Registration only till <strong>20 April 2026</strong>!<br>From 21 April, ₹199 Registration Fee will be charged.';
+        } else {
+            document.querySelectorAll('.lang-btn')[1].classList.add('active');
+            document.getElementById('title').innerHTML = 'डिफेंस करियर कंसल्टेशन एंड गाइडेंस सेंटर';
+            document.getElementById('tagline').innerHTML = 'गांव के सपनों को भारतीय वायु सेना में बदलना • अग्निवीर वायु (X & Y ग्रुप) पर विशेष फोकस';
+            document.getElementById('about-h2').innerHTML = 'हमारे बारे में';
+            document.getElementById('about-text').innerHTML = 'डिफेंस करियर कंसल्टेशन एंड गाइडेंस सेंटर में हम गंगौली और आस-पास के क्षेत्रों के महत्वाकांक्षी युवाओं को <strong>भारतीय वायु सेना अग्निवीर वायु (X & Y ग्रुप)</strong> में सफलतापूर्वक भर्ती होने के लिए मार्गदर्शन देते हैं। कई 12वीं पास छात्र अच्छे अंकों के बावजूद सही दिशा न मिलने के कारण भटक जाते हैं। हम व्यावहारिक और अनुभव-आधारित मेंटरशिप देते हैं ताकि आपका समय बर्बाद न हो और आप आत्मविश्वास व अनुशासन के साथ अपना सपना पूरा कर सकें।';
+            document.getElementById('why-h2').innerHTML = 'हमसे क्यों जुड़ें';
+            document.getElementById('why-text').innerHTML = 'गांव के छात्र अक्सर 12वीं के बाद सही गाइडेंस न मिलने के कारण confused हो जाते हैं। हम इस समस्या का समाधान करते हैं — सिलेबस की सही रणनीति, परीक्षा की तैयारी, शारीरिक ट्रेनिंग के टिप्स और चयन प्रक्रिया की असली जानकारी देकर। हमारा फोकस आपका कीमती समय बचाना और एयर फोर्स X & Y ग्रुप में सफलता दिलाना है।';
+            document.getElementById('promise').innerHTML = 'हमारा वादा:';
+            document.getElementById('eligibility-h2').innerHTML = 'एयर फोर्स X & Y ग्रुप (अग्निवीर वायु) 2026-27 के लिए योग्यता';
+            document.getElementById('common-req').innerHTML = '<strong>दोनों ग्रुप्स के लिए सामान्य शर्तें:</strong>';
+            document.getElementById('edu-qual').innerHTML = '<strong>शैक्षणिक योग्यता:</strong>';
+            document.getElementById('note').innerHTML = '<em>नोट: हमेशा आधिकारिक नोटिफिकेशन चेक करें — agnipathvayu.cdac.in या careerairforce.gov.in पर।</em>';
+            document.getElementById('selection-h2').innerHTML = 'चयन प्रक्रिया (संक्षेप में)';
+            document.getElementById('mentor-h2').innerHTML = 'मेंटर के बारे में';
+            document.getElementById('contact-h2').innerHTML = 'संपर्क करें';
+            document.getElementById('register-btn').innerHTML = 'फ्री में अभी रजिस्टर करें';
+            document.getElementById('whatsapp-btn').innerHTML = 'व्हाट्सएप पर संपर्क करें';
+            document.getElementById('follow').innerHTML = '<strong>नवीनतम एयर फोर्स अपडेट्स के लिए हमें फॉलो करें:</strong>';
+            document.getElementById('whatsapp-link').innerHTML = 'यहां क्लिक करके व्हाट्सएप पर संपर्क करें';
+            document.getElementById('address').innerHTML = 'गंगौली, गाजीपुर, उत्तर प्रदेश';
+            document.getElementById('urgency-box').innerHTML = '<strong>⚠️ ध्यान दें</strong> Free Registration सिर्फ <strong>20 April 2026</strong> तक!<br>21 April से ₹199 Registration Fee लगेगी।';
+        }
+    }
+
+    window.onload = function() {
+        switchLanguage('hi');
+    };
+</script>
 
 </body>
 </html>
