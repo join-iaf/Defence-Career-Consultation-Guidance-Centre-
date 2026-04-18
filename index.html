@@ -7,7 +7,6 @@
     <title>Defence Career Consultation & Guidance Centre | Government Jobs After 12th</title>
     
     <style>
-        /* Tumhara pura style yahan same hai (copy-paste kiya hai) */
         body {
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -84,7 +83,7 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.2);
         }
         .register { background: #007bff; }
-        .whatsapp { background: #25D366; }
+        .telegram { background: #229ED9; }
         .highlight, .preferred-highlight {
             background: #fff3e0;
             padding: 20px;
@@ -105,20 +104,6 @@
             margin: 25px 0;
             text-align: center;
             font-size: 19px;
-        }
-        .urgency-badge {
-            background: linear-gradient(135deg, #ff4d4d, #e63939);
-            color: white;
-            padding: 16px 25px;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 16.5px;
-            line-height: 1.5;
-            margin: 18px auto;
-            max-width: 360px;
-            box-shadow: 0 6px 20px rgba(230, 57, 57, 0.4);
-            border: 3px solid #fff;
-            font-weight: 600;
         }
         .eligibility-table {
             width: 100%;
@@ -256,7 +241,7 @@
         <h2 id="contact-h2">Contact Us</h2>
         <div class="contact-box">
             <p><strong>📍 Address:</strong> <span id="address">Gangauli, Ghazipur, Uttar Pradesh</span></p>
-            <p><strong>📞 WhatsApp:</strong> <a href="https://wa.me/918858235844" style="color:#25D366; text-decoration:none; font-weight:bold;" id="whatsapp-link">Click here to Contact on WhatsApp</a></p>
+            <p><strong>📱 Telegram:</strong> <a href="https://t.me/+CrYLofxdosAyMjY1" style="color:#229ED9; text-decoration:none; font-weight:bold;" id="telegram-link">Join Our Telegram Group</a></p>
         </div>
     </section>
 
@@ -264,14 +249,7 @@
 
 <div class="container">
     <a href="https://forms.gle/KosUyvCoHKzXSaRr5" class="btn register" id="register-btn">Register Now for Free</a>
-
-    <div class="urgency-badge" id="urgency-box">
-        <strong>⚠️ Important Notice</strong><br>
-        Free Registration only till <strong>20 April 2026</strong>!<br>
-        From 21 April, ₹199 Registration Fee will be charged.
-    </div>
-
-    <a href="https://wa.me/918858235844" class="btn whatsapp" id="whatsapp-btn">Contact Us on WhatsApp</a>
+    <a href="https://t.me/+CrYLofxdosAyMjY1" class="btn telegram" id="telegram-btn">Join Telegram Group</a>
 </div>
 
 <footer>
@@ -308,11 +286,10 @@
             document.getElementById('mentor-h2').innerHTML = 'About the Mentor';
             document.getElementById('contact-h2').innerHTML = 'Contact Us';
             document.getElementById('register-btn').innerHTML = 'Register Now for Free';
-            document.getElementById('whatsapp-btn').innerHTML = 'Contact Us on WhatsApp';
+            document.getElementById('telegram-btn').innerHTML = 'Join Telegram Group';
             document.getElementById('follow').innerHTML = '<strong>Follow Us for Latest Government Job Updates:</strong>';
-            document.getElementById('whatsapp-link').innerHTML = 'Click here to Contact on WhatsApp';
+            document.getElementById('telegram-link').innerHTML = 'Join Our Telegram Group';
             document.getElementById('address').innerHTML = 'Gangauli, Ghazipur, Uttar Pradesh';
-            document.getElementById('urgency-box').innerHTML = '<strong>⚠️ Important Notice</strong><br>Free Registration only till <strong>20 April 2026</strong>!<br>From 21 April, ₹199 Registration Fee will be charged.';
             document.getElementById('preferred-highlight').innerHTML = '<strong>⭐ Our Primary Focus:</strong><br><span style="font-size:22px; color:#ff9933;">Indian Air Force Agniveer Vayu (X Group - Technical)</span><br>Best option for technical training, better salary package and career growth.';
             
         } else {  // Hindi
@@ -331,11 +308,10 @@
             document.getElementById('mentor-h2').innerHTML = 'मेंटर के बारे में';
             document.getElementById('contact-h2').innerHTML = 'संपर्क करें';
             document.getElementById('register-btn').innerHTML = 'फ्री में अभी रजिस्टर करें';
-            document.getElementById('whatsapp-btn').innerHTML = 'व्हाट्सएप पर संपर्क करें';
+            document.getElementById('telegram-btn').innerHTML = 'टेलीग्राम ग्रुप जॉइन करें';
             document.getElementById('follow').innerHTML = '<strong>नवीनतम सरकारी नौकरी अपडेट्स के लिए हमें फॉलो करें:</strong>';
-            document.getElementById('whatsapp-link').innerHTML = 'यहां क्लिक करके व्हाट्सएप पर संपर्क करें';
+            document.getElementById('telegram-link').innerHTML = 'हमारा टेलीग्राम ग्रुप जॉइन करें';
             document.getElementById('address').innerHTML = 'गंगौली, गाजीपुर, उत्तर प्रदेश';
-            document.getElementById('urgency-box').innerHTML = '<strong>⚠️ ध्यान दें</strong><br>Free Registration सिर्फ <strong>20 April 2026</strong> तक!<br>21 April से ₹199 Registration Fee लगेगी।';
             document.getElementById('preferred-highlight').innerHTML = '<strong>⭐ हमारा प्राथमिक फोकस:</strong><br><span style="font-size:22px; color:#ff9933;">भारतीय वायु सेना अग्निवीर वायु (X Group - Technical)</span><br>Technical ट्रेनिंग, बेहतर सैलरी पैकेज और करियर ग्रोथ के लिए सबसे अच्छा विकल्प।';
         }
     }
